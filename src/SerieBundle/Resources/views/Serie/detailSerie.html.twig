@@ -54,7 +54,7 @@
         {%for comment in serie.comments|slice(0,3) %}
             <div class="row">
                 <div class="col-lg-1">
-                    <img src="{{comment.user.profilePicture.url | default(asset('img/avatar.jpg'))}}"
+                    <img src="{{asset(comment.user.profilePicture.url) | default(asset('img/avatar.jpg'))}}"
                          style="width:100%"/>
                 </div>
                 <div class="col-lg-11">
