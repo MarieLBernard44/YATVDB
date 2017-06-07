@@ -141,6 +141,11 @@ button a{
 	background-color: white;
 }
 
+.resultSearch{
+	color: #333;
+	font-weight: bold;
+}
+
 /* Blocs genres visibles dans la page d'accueil des séries */
 .Comédie, .Dramatique, .Action, .Aventure, .Science-fiction, .Historique, .Famille, .Thriller
 {
@@ -653,4 +658,23 @@ a.right.carousel-control, a.left.carousel-control{
 
 i.glyphicon-chevron-left, i.glyphicon-chevron-right{
 	color:white;
+}
+
+#seriebundle_seriecomment label{
+    display: block;
+}
+
+#seriebundle_seriecomment_content{
+    width: 100%;
+    height: 80px;
+}
+
+#seriebundle_seriecomment_score{
+    width: 100%;
+    border: 1ox solid grey;
+    outline: none;
+}
+
+#seriebundle_seriecomment_save{
+    margin-top: 20px;
 }

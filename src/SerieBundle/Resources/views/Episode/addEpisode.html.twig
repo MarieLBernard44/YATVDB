@@ -10,16 +10,17 @@
 		{{ form_errors(form) }}
 
    		<h2>Formulaire d'ajout Episode</h2>
-   		<p> Complète ce formulaire et notre équipe se chargera de valider la publication de l'épisode'! </p>
+   		<p> Complète ce formulaire et notre équipe se chargera de valider la publication de l'épisode ! </p>
 
    		<div class="form-group">
+
             {{ form_label(form.name, "Titre de l'épisode': ") }}
             {{ form_errors(form.name) }}
             {{ form_widget(form.name, {'attr':{'class':'form-control'}}) }}
         </div>
 
         <div class="form-group">
-            {{ form_label(form.episodeNumber, "Episode n°: ") }}
+            {{ form_label(form.episodeNumber, "N° de l'épisode: ") }}
             {{ form_errors(form.episodeNumber) }}
             {{ form_widget(form.episodeNumber, {'attr':{'class':'form-control'}}) }}
         </div>

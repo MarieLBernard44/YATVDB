@@ -16,6 +16,7 @@ class SeasonType extends AbstractType
     {
         $builder
 
+
             ->add('seasonNumber', 'integer', array(
                 'label' => 'Saison n°: '))
             ->add('name', 'text', array(
