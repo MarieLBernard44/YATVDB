@@ -16,19 +16,24 @@ class EpisodeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('episodeNumber')
+            ->add('episodeNumber', 'integer', array(
+                'label' => 'Episode n°: '))
 
-            ->add('name')
-            ->add('resume')
+            ->add('name', 'text', array(
+                'label' => 'Titre: '))
+            ->add('resume', 'textarea', array(
+                'label' => 'Détails et synopsis: '))
             ->add('diffusionDate', 'date', [
                 'widget' => 'single_text',
                 'html5' => false,
                 'format' => 'dd-MM-yyyy',
+                'label' => 'Date de diffusion: ',
                 'attr' => ["class" => 'js-datepicker form-control',
                            "placeholder" => 'Pick a date']
             ])
             ->add('image', new ImageType(), array(
-                'required' => false))
+                'required' => false,
+                'label' => 'Image: '))
         ;
     }
     

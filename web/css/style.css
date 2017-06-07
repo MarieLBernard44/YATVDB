@@ -574,15 +574,15 @@ a.btn-updateSerie i, a.btn-deleteSerie i, a.btn-addEpisode i, a.btn-updateSeason
 	font-size: 13px;
 }
 
-input#seriebundle_serie_name, textarea#seriebundle_serie_resume, input#seriebundle_season_name, textarea#seriebundle_season_resume{
+input#seriebundle_serie_name, textarea#seriebundle_serie_resume, input#seriebundle_season_name, textarea#seriebundle_season_resume, input#seriebundle_episode_name, textarea#seriebundle_episode_resume{
 	width:1108px;
 	margin-bottom: 15px;
 }
 
-textarea#seriebundle_serie_resume, textarea#seriebundle_season_resume {height: 100px;}
+textarea#seriebundle_serie_resume, textarea#seriebundle_season_resume, textarea#seriebundle_episode_resume {height: 100px;}
 .editSerieForm label {margin-top: 10px}
 
-button#seriebundle_serie_submit, button#seriebundle_season_submit{
+button#seriebundle_serie_submit, button#seriebundle_season_submit, button#seriebundle_episode_submit{
 	width: 96px;
 	height: 46px;
 	border-radius: 5px;

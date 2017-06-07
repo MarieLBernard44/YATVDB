@@ -10,14 +10,16 @@ Proposition de modification de l'épisode n°{episode.episodeNumber}
      <h2>Formulaire de modification d'un épisode</h2>
         <p> Complète ce formulaire et vos modifications seront prises en compte et mises en ligne très prochainement par notre équipe! </p>
 
-    {{ form(edit_form) }}
+        <div class="form-group">
+            {{ form(edit_form) }}
+        </div>
 
-    <ul class="record_actions">
-    	<li>
-    	   <a href="{{ path('serie_showSeason', { 'name': serie.name,'seasonNumber': season.seasonNumber }) }}">
-    	       RETOUR
-    	   </a>
-    	</li>
-    </ul>
+        <div class="row">
+            <div class="col-lg-offset-9 col-lg-3 pull-right">
+        	   <a href="{{ path('serie_showSeason', { 'name': serie.name,'seasonNumber': season.seasonNumber }) }}" class="btn btn-lg btn-danger pull-right">
+        	       Annuler
+        	   </a>
+    	   </div>
+        </div>
  </div>
 {% endblock %}
