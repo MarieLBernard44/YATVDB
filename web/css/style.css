@@ -377,7 +377,7 @@ span.lastSerieTitle {
 	width: 1138px;
 }
 
-.profilContent h2, .addSerieForm h2{
+.profilContent h2, .addSerieForm h2, .editSerieForm h2{
 	color:#48b9c7;
 	font-family: 'Anton', sans-serif;
 	border-bottom: 1px solid #48b9c7;
@@ -567,8 +567,33 @@ a.btn-updateSerie i, a.btn-deleteSerie i, a.btn-addEpisode i, a.btn-updateSeason
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
 	font-size: 13px;
-
 }
+
+input#seriebundle_serie_name, textarea#seriebundle_serie_resume, input#seriebundle_season_name, textarea#seriebundle_season_resume{
+	width:1108px;
+	margin-bottom: 15px;
+}
+
+textarea#seriebundle_serie_resume, textarea#seriebundle_season_resume {height: 100px;}
+.editSerieForm label {margin-top: 10px}
+
+button#seriebundle_serie_submit, button#seriebundle_season_submit{
+	width: 96px;
+	height: 46px;
+	border-radius: 5px;
+	box-shadow: none;
+	color: white;
+	background-color: #48b9c7;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	margin-top: 50px;
+	margin-bottom: 0px;
+}
+input#seriebundle_serie_category,   div#seriebundle_serie_category label{
+	margin-right: 15px;
+}
+
 
 /*
 serie_detail content highlight

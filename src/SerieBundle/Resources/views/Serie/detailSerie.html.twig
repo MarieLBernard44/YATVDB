@@ -13,7 +13,7 @@
 
           <div class="row">
             <div class="col-lg-3">
-                <img class="thumbnail" alt="{{ serie.image.alt }}" src="/YATVDB/web/{{ serie.image.url }}" style="height:300px"/>
+                <img class="thumbnail" alt="{{ serie.image.alt }}" src="/YATVDB/web/{{ serie.image.url }}" style="height:400px"/>
             </div>
             <div class="col-lg-5">
                 <span class="libelle"> Titre: </span> <span> {{serie.name}} </span> <br> <br>
@@ -23,16 +23,22 @@
                 <p class="libelle"> Résumé: </p> <p>  {{serie.resume}} </p>
             </div>
             <div class="col-lg-4">
-                <a class="btn-updateSerie btn pull-right" href="{{path('serie_edit', {'id': serie.id})}}">
-                    <i class="glyphicon glyphicon-scissors"></i> Modifier la série
-                </a> <br>
-                <a class="btn-deleteSerie btn pull-right" href="{{path('serie_delete', {'id':serie.id})}}">
-                    <i class="glyphicon glyphicon-trash"></i> Supprimer la série
-                </a> <br>
-
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 <a href="{{path('serie_addSeason', {'name': serie.name})}}" class="btn-addSeason btn pull-right">
                     <i class="glyphicon glyphicon-plus"> </i> Ajouter une saison
                 </a> 
+                <a class="btn-updateSerie btn pull-right" href="{{path('serie_edit', {'id': serie.id})}}">
+                    <i class="glyphicon glyphicon-scissors"></i> Modifier la série
+                </a> <br>
+
+                {% if is_granted('ROLE_AUTEUR') %}
+                <a class="btn-deleteSerie btn pull-right" href="{{path('serie_delete', {'id':serie.id})}}">
+                    <i class="glyphicon glyphicon-trash"></i> Supprimer la série
+                </a> <br>
+                {% endif %}
+                {%endif%}
+
+                
             </div>
         </div>
 

@@ -5,15 +5,25 @@ Proposition de modification de la saison n° {season.seasonNumber}
 {% endblock %}
 
 {% block body -%}
-    <h1>Season edit</h1>
 
+<div class="container editSerieForm">
+   <h2>Formulaire de modification de saisone</h2>
+        <p> Complète ce formulaire et vos modifications seront prises en compte et mises en ligne très prochainement par notre équipe! </p>
+
+    <div class="form-group">
     {{ form(edit_form) }}
 
-    <ul class="record_actions">
-	    <li>
-	        <a href="{{ path('serie_showSeason', { 'name': serie.name,'seasonNumber': season.seasonNumber }) }}">
-	            RETOUR
+    
+    </div>
+
+   
+	     <div class="col-lg-offset-9 col-lg-3 pull-right">
+	        <a href="{{ path('serie_showSeason', { 'name': serie.name,'seasonNumber': season.seasonNumber }) }}" class="btn btn-lg btn-danger pull-right">
+	            Annuler
 	        </a>
-	    </li>
-	</ul>
+	    </div>
+	    
+	
 {% endblock %}
+
+

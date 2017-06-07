@@ -16,15 +16,19 @@ class SeasonType extends AbstractType
     {
         $builder
 
-            ->add('seasonNumber')
-            ->add('name')
-            ->add('resume')
+            ->add('seasonNumber', 'integer', array(
+                'label' => 'Saison n°: '))
+            ->add('name', 'text', array(
+                'label' => 'Titre: '))
+            ->add('resume', 'textarea', array(
+                'label' => 'Synonpsis et détails: '))
             ->add('diffusionDate', 'date', [
                 'widget' => 'single_text',
                 'html5' => false,
                 'format' => 'dd-MM-yyyy',
                 'attr' => ["class" => 'js-datepicker form-control',
-                           "placeholder" => 'Pick a date']
+                           "placeholder" => 'Pick a date'],
+                'label' => 'Date de diffusion: '
             ])
 
         ;

@@ -8,7 +8,9 @@
 
         <div class="col-lg-4 invitSerie thumbnail">
             <h1> {{ category.name }} </h1>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
             <a class="btn addSerie" href="{{path('serie_addSerie')}}"> <span class="glyphicon glyphicon-plus-sign"> </span> <br> Ajouter <br> une série  </a>
+            {%endif%}
         </div>
 
 

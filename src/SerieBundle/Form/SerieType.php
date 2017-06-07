@@ -18,25 +18,29 @@ class SerieType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', 'text')
-            ->add('resume', 'textarea')
+            ->add('name', 'text', array(
+                'label' => 'Titre: '))
+            ->add('resume', 'textarea', array(
+                'label' => 'Synopsis et détails: '))
             ->add('release_date', 'date', [
                 'widget' => 'single_text',
                 'html5' => false,
                 'format' => 'dd-MM-yyyy',
                 'attr' => ["class" => 'js-datepicker form-control',
-                           "placeholder" => 'Pick a date']
+                           "placeholder" => 'Pick a date'],
+                'label' => 'Date de diffusion: '
             ])
 
 
-            ->add('image', new ImageType(), ['required' => false] )
+            ->add('image', new ImageType(), ['required' => false, 'label' => 'Image: '] )
 
             ->add('category','entity', array(
                 'class'=>"SerieBundle:serieCategory",
                 'property'=>"name",
                 'multiple'=>false,
                 'required'=>true,
-                'expanded'=>true
+                'expanded'=>true,
+                'label' => 'Genre de la série: '
                 ))
         ;
     }
